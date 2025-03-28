@@ -1,0 +1,173 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+header {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://uploads.jovemnerd.com.br/wp-content/uploads/2023/08/baldurs_gate_3_capa__5m88x0.jpg');
+    background-size: cover;
+    background-position: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    color: gold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 1rem auto;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+section {
+    padding: 3rem 0;
+    border-bottom: 1px solid #3a3a4e;
+}
+h2 {
+    color: gold;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+h3 {
+    color: goldenrod;
+}
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.info-card {
+    background-color: rgb(38, 35, 49);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.features {
+    display: grid;  
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.feature-item {
+    background-color: rgb(38, 35, 49);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid goldenrod;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.gallery img:hover {
+    transform: scale(1.03);
+}
+.characters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+.character {
+    background-color: rgb(38, 35, 49);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.character img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.character-info {
+    padding: 1rem;
+    flex: 1;
+}
+.cta {
+    text-align: center;
+    padding: 3rem 0;
+}
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+.btn {
+    display: inline-block;
+    background-color: gold;
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+.btn:hover {
+    background-color: goldenrod;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+.btn-secondary {
+    background-color: rgb(38, 35, 49);
+    color: white;
+}
+.btn-secondary:hover {
+    background-color: rgb(50, 44, 73);
+}
+footer {
+    background-color: rgb(38, 35, 49);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+.review {
+    background-color: rgb(38, 35, 49);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid gold;
+}
+.reviewer {
+    font-weight: bold;
+    color: gold;
+    margin-top: 0.5rem;
+}
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .features {
+        grid-template-columns: 1fr;
+    }
+    .character {
+        flex-direction: column;
+    }
+    .character img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px 8px 0 0;
+    }
+}
