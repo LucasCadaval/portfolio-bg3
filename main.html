@@ -149,7 +149,11 @@
                             <h3>Dragonborn</h3>
                         </div>
                     </a>
-                </div>
+                </div> 
+                <div id="race-info" class="race-info-panel">
+                    <h2>Selecione uma raça</h2>
+                    <p>As informações aparecerão aqui.</p>
+                </div>               
             </div>
         </section>
 
@@ -276,5 +280,96 @@
             </div>
         </footer>
     </main>
+
+    <script>
+        const raceData = {
+            Human: {
+                img: "media/races/human.png",
+                name: "Human",
+                description: "Versatile and ambitious, humans adapt easily and excel in any class.",
+                features: "Bonus to all ability scores, adaptable background."
+            },
+            Elf: {
+                img: "media/races/elf.png",
+                name: "Elf",
+                description: "With ethereal countenances and long lifespans, elves are at home with nature's power.",
+                features: "Darkvision, Keen Senses, Fey Ancestry"
+            },
+            Dwarf: {
+                img: "media/races/dwarf.png",
+                name: "Dwarf",
+                description: "Stout and hardy, dwarves are known for their resilience and skill in battle.",
+                features: "Darkvision, Dwarven Resilience, Tool Proficiency"
+            },
+            "Half-Elf": {
+                img: "media/races/half-elf.png",
+                name: "Half-Elf",
+                description: "Blending the best of elves and humans, half-elves are charismatic and adaptable.",
+                features: "Darkvision, Fey Ancestry, Skill Versatility"
+            },
+            Halfling: {
+                img: "media/races/halfling.png",
+                name: "Halfling",
+                description: "Small but courageous, halflings are lucky and nimble.",
+                features: "Lucky, Brave, Halfling Nimbleness"
+            },
+            Githyanki: {
+                img: "media/races/githyanki.png",
+                name: "Githyanki",
+                description: "Psionically gifted warriors from the Astral Plane, known for their combat prowess.",
+                features: "Martial Prodigy, Astral Knowledge"
+            },
+            Tiefling: {
+                img: "media/races/tiefling.png",
+                name: "Tiefling",
+                description: "Descended from infernal bloodlines, tieflings possess innate magical abilities.",
+                features: "Darkvision, Hellish Resistance, Infernal Legacy"
+            },
+            Drow: {
+                img: "media/races/drow.png",
+                name: "Drow",
+                description: "A subrace of elves adapted to life in the Underdark, known for their magic and cunning.",
+                features: "Superior Darkvision, Drow Magic, Sunlight Sensitivity"
+            },
+            Gnome: {
+                img: "media/races/gnome.png",
+                name: "Gnome",
+                description: "Inventive and curious, gnomes are known for their intellect and magical affinity.",
+                features: "Gnome Cunning, Darkvision, Artificer’s Lore"
+            },
+            "Half-Orc": {
+                img: "media/races/half-orc.png",
+                name: "Half-Orc",
+                description: "Strong and fierce, half-orcs combine human ingenuity with orcish ferocity.",
+                features: "Darkvision, Relentless Endurance, Savage Attacks"
+            },
+            Dragonborn: {
+                img: "media/races/dragonborn.png",
+                name: "Dragonborn",
+                description: "Draconic ancestry grants dragonborn powerful breath weapons and elemental resistance.",
+                features: "Draconic Ancestry, Breath Weapon, Damage Resistance"
+            }
+        };
+    
+        document.querySelectorAll('.race').forEach(race => {
+            race.addEventListener('click', (e) => {
+                e.preventDefault(); 
+    
+                const raceName = race.querySelector('h3').textContent;
+                const info = raceData[raceName];
+    
+                if (info) {
+                    const panel = document.getElementById('race-info');
+                    panel.innerHTML = `
+                        <img src="${info.img}" alt="${info.name}">
+                        <h2>${info.name}</h2>
+                        <p><strong>Description:</strong> ${info.description}</p>
+                        <p><strong>Characteristics:</strong> ${info.features}</p>
+                    `;
+                } 
+            });
+        });
+    </script>
+    
 </body>
 </html>
